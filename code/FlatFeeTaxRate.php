@@ -114,7 +114,7 @@ class FlatFeeTaxRate_Extension extends DataExtension {
 	 * 
 	 * @see DataObjectDecorator::extraStatics()
 	 */
-	public static $has_many = array(
+	private static $has_many = array(
 		'FlatFeeTaxRates' => 'FlatFeeTaxRate'
 	);
 
@@ -131,7 +131,7 @@ class FlatFeeTaxRate_Admin extends ShopAdmin {
 	);
 
 	private static $url_rule = 'ShopConfig/Tax';
-	protected static $url_priority = 120;
+	private static $url_priority = 120;
 	private static $menu_title = 'Shop Tax Rates';
 
 	private static $url_handlers = array(
